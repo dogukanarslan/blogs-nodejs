@@ -1,0 +1,29 @@
+.new-blog form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: linear-gradient(to right bottom, rgba(255,255,255,.2), rgba(255,255,255,.9));
+    padding: 100px;
+    border-radius: 50px;
+  }
+  
+  .new-blog label {
+    display: block;
+    margin-top: 24px;
+  }
+  
+  .new-blog input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+  }
+  
+  .new-blog button {
+    margin-top: 20px;
+    background: crimson;
+    color: white;
+    padding: 6px;
+    border: 0;
+    font-size: 1.2em;
+    cursor: pointer;
+  }

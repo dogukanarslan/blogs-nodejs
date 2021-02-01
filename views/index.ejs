@@ -3,19 +3,19 @@
   <%- include('./partials/head.ejs') %>
   <body>
     <%- include('./partials/nav.ejs') %>
+    <div class="container">
+      <div class="blogs content bg-glass">
+        <% if (blogs.length) { %> <% blogs.forEach(blog => { %>
+        <a href="/blogs/<%= blog._id %>">
+          <h1><%= blog.title %></h1>
+          <h4><%= blog.snippet %></h4>
+          <p><%= blog.body %></p>
+        </a>
 
-    <div class="blogs content">
-      <h2>All Blogs</h2>
-      <% if (blogs.length) { %> <% blogs.forEach(blog => { %>
-      <a href="/blogs/<%= blog._id %>">
-        <h1><%= blog.title %></h1>
-        <h4><%= blog.snippet %></h4>
-        <p><%= blog.body %></p>
-      </a>
-
-      <% }) %> <% } else { %>
-      <p>There are no blogs!</p>
-      <% } %>
+        <% }) %> <% } else { %>
+        <p>There are no blogs!</p>
+        <% } %>
+      </div>
     </div>
   </body>
 </html>

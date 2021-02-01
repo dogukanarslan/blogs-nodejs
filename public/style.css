@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import './newBlog.css';
+@import './nav.css';
+@import './blogs.css';
+@import './details.css';
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background: #c0362c;
+  color: #fff;
 }
 
 ul {
@@ -9,79 +16,15 @@ ul {
   padding: 0;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-  border-bottom: 1px solid #777;
+a {
+  color: #fff;
 }
 
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav li {
-  list-style: none;
-  margin-left: 20px;
-}
-
-nav a {
-  color: #777;
-  font-weight: 300;
-  text-decoration: none;
-}
-
-.blogs a {
-  color: #888;
-  text-decoration: none;
-  display: block;
-  margin: 40px 0;
-  padding-left: 30px;
-  border-left: 6px solid crimson;
-}
-.blogs a:hover {
-  color: crimson;
-}
-
-.new-blog form {
-  max-width: 400px;
+.container {
+  width: 60%;
   margin: 0 auto;
 }
 
-.new-blog label {
-  display: block;
-  margin-top: 24px;
-}
-
-.new-blog input {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 8px;
-}
-
-.new-blog button {
-  margin-top: 20px;
-  background: crimson;
-  color: white;
-  padding: 6px;
-  border: 0;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-
-.details{
-  position: relative;
-}
-.delete{
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 50%;
-  padding: 8px;
-}
-.delete:hover{
-  cursor: pointer;
+.bg-glass {
+  background: linear-gradient(to right bottom, rgba(255,255,255,.1), rgba(255,255,255,.4));
 }

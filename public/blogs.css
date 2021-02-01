@@ -1,0 +1,14 @@
+.blogs {
+    color: #000;
+}
+
+.blogs a {
+  text-decoration: none;
+  display: block;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 6px solid #000;
+}
+.blogs a:hover {
+  color: #000;
+}
