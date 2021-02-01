@@ -1,29 +1,33 @@
 .new-blog form {
-    max-width: 400px;
-    margin: 0 auto;
-    background: linear-gradient(to right bottom, rgba(255,255,255,.2), rgba(255,255,255,.9));
-    padding: 100px;
-    border-radius: 50px;
-  }
-  
-  .new-blog label {
-    display: block;
-    margin-top: 24px;
-  }
-  
-  .new-blog input {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 8px;
-  }
-  
-  .new-blog button {
-    margin-top: 20px;
-    background: crimson;
-    color: white;
-    padding: 6px;
-    border: 0;
-    font-size: 1.2em;
-    cursor: pointer;
-  }
+  margin: 0 auto;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.9)
+  );
+  padding: 50px;
+  text-align: center;
+}
+
+.new-blog label {
+  color: #000;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: block;
+}
+
+.new-blog input {
+  width: 60%;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+.new-blog button {
+  background: var(--mainColor);
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: white;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+}

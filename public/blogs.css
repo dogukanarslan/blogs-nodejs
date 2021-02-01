@@ -1,14 +1,26 @@
 .blogs {
+  font-size: 16px;
     color: #000;
+}
+
+.blogs h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.blogs h4 {
+  font-weight: 800;
+  margin: 10px 0;
 }
 
 .blogs a {
   text-decoration: none;
   display: block;
-  margin: 40px 0;
   padding-left: 30px;
-  border-left: 6px solid #000;
+  border-left: 4px solid #000;
 }
+
 .blogs a:hover {
   color: #000;
 }

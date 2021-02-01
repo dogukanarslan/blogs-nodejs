@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import './reset.css';
 @import './newBlog.css';
 @import './nav.css';
 @import './blogs.css';
 @import './details.css';
 
+:root {
+  --borderRadius: 50px;
+  --mainColor: #c0362c;
+  --navFontSize: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background: #c0362c;
+  background: var(--mainColor);
   color: #fff;
 }
 
@@ -26,5 +37,9 @@ a {
 }
 
 .bg-glass {
-  background: linear-gradient(to right bottom, rgba(255,255,255,.1), rgba(255,255,255,.4));
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.4)
+  );
 }
