@@ -4,20 +4,19 @@ nav {
   text-transform: uppercase;
   font-weight: 800;
   height: 50px;
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #000;
   margin-bottom: 20px;
   font-size: 16px;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 nav li {
   list-style: none;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 nav a {

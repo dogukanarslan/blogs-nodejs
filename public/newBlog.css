@@ -1,10 +1,5 @@
 .new-blog form {
   margin: 0 auto;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.9)
-  );
   padding: 50px;
   text-align: center;
 }
@@ -23,11 +18,13 @@
 }
 
 .new-blog button {
-  background: var(--mainColor);
+  background: #000;
   border-radius: 10px;
   padding: 10px 15px;
   color: white;
   border: 0;
   font-size: 16px;
   cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
 }

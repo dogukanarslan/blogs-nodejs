@@ -4,9 +4,9 @@
   <body>
     <%- include('./partials/nav.ejs') %>
     <div class="container">
-      <div class="blogs content bg-glass">
+      <div class="blogs content">
         <% if (blogs.length) { %> <% blogs.forEach(blog => { %>
-        <a href="/blogs/<%= blog._id %>">
+        <a href="/blogs/<%= blog._id %>" class="bg-glass radius blog">
           <h1><%= blog.title %></h1>
           <h4><%= blog.snippet %></h4>
           <p><%= blog.body %></p>
