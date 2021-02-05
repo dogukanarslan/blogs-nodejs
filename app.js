@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes.js');
+const authRoutes = require('./routes/authRoutes.js');
 
 // Create an express app
 const app = express();
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 
 // Blog routes
 app.use('/blogs', blogRoutes);
+app.use(authRoutes);
 
 app.use((req, res) => {
   res.status(404).render('404', { title: 'Not found' });
