@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 @import './reset.css';
 @import './newBlog.css';
 @import './nav.css';
 @import './blogs.css';
 @import './details.css';
+@import './404.css';
 
 :root {
   --borderRadius: 20px;
