@@ -3,8 +3,29 @@
   <%- include('../partials/head.ejs') %>
   <body>
     <%- include('../partials/nav.ejs') %>
-    <div class="container">
-      <p>Sign Up!</p>
+    <div class="container auth bg-glass radius">
+      <form>
+        <h1>Sign up</h1>
+
+        <label for="email">Email</label>
+        <input type="text" name="email" required />
+        <div class="email error"></div>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" required />
+        <div class="password error"></div>
+
+        <button>Sign Up!</button>
+      </form>
     </div>
+
+    <script>
+      const form = document.querySelector('form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = form.email.value;
+        const password = form.password.value;
+      });
+    </script>
   </body>
 </html>

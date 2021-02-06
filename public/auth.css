@@ -1,0 +1,37 @@
+.auth form {
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.auth label {
+  color: #000;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: block;
+}
+
+.auth input {
+  width: 60%;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+.auth button {
+  background: #000;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: white;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.auth h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}

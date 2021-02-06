@@ -5,6 +5,7 @@
 @import './blogs.css';
 @import './details.css';
 @import './404.css';
+@import './auth.css';
 
 :root {
   --borderRadius: 20px;
