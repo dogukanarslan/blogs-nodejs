@@ -16,7 +16,7 @@ mongoose
 app.set('view engine', 'ejs');
 
 // Middleware and static files
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static('public'));
 
 // Redirect
@@ -26,6 +26,8 @@ app.get('/', (req, res) => {
 
 // Blog routes
 app.use('/blogs', blogRoutes);
+
+// Auth routes
 app.use(authRoutes);
 
 app.use((req, res) => {
