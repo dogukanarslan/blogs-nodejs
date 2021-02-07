@@ -7,6 +7,17 @@ const handleErrors = (err) => {
 
   let errors = { email: '', password: '' };
 
+  // Incorrect email
+  if ('Incorrect email' === err.message) {
+    errors.email = 'that email is not registered';
+  }
+
+  // Incorrect Password
+  if ('Incorrect password' === err.message) {
+    errors.password = 'that password is incorrect';
+  }
+
+  // Duplicate email
   if (11000 === err.code) {
     errors.email = 'That email is already registered';
     return errors;
@@ -24,9 +35,9 @@ const handleErrors = (err) => {
 
 const maxAge = 3 * 24 * 60 * 60;
 const createToken = (id) => {
-  return jwt.sign({id}, 'themostsecurethingintheworld', {
+  return jwt.sign({ id }, 'themostsecurethingintheworld', {
     expiresIn: maxAge
-  })
+  });
 };
 
 module.exports.signup_get = (req, res) => {
@@ -43,15 +54,25 @@ module.exports.signup_post = async (req, res) => {
   try {
     const user = await User.create({ email, password });
     const token = createToken(user._id);
-    res.cookie('jwt', token, {httpOnly: true, maxAge: maxAge * 1000});
-    res.status(201).json({user: user._id});
+    res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
+    res.status(201).json({ user: user._id });
   } catch (err) {
     const errors = handleErrors(err);
-    res.status(400).json({errors});
+    res.status(400).json({ errors });
   }
   res.send('New signup');
 };
 
-module.exports.login_post = (req, res) => {
-  res.send('Login post');
+module.exports.login_post = async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await User.login(email, password);
+    const token = createToken(user._id);
+    res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
+    res.status(200).json({ user: user._id });
+  } catch (err) {
+    const errors = handleErrors(err);
+    res.status(400).json({ errors });
+  }
 };
