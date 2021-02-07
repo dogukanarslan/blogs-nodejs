@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes.js');
 const authRoutes = require('./routes/authRoutes.js');
-const {requireAuth} = require('./middleware/authMiddleware');
+const { requireAuth, checkUser } = require('./middleware/authMiddleware');
 const cookieParser = require('cookie-parser');
 
 // Create an express app
@@ -21,6 +21,9 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cookieParser());
+
+// Check user for every request
+app.get('*', checkUser);
 
 // Redirect
 app.get('/', (req, res) => {

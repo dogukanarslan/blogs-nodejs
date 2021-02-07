@@ -4,11 +4,16 @@
       <a href="/"><h1>Blog App</h1></a>
     </div>
     <ul>
+      <% if (!!user) { %>
       <li><a href="/">Blogs</a></li>
       <li><a href="/blogs/create">New Blog</a></li>
+      <li><a href="/logout">Logout</a></li>
+      <li style="text-transform: lowercase;"><%= user.email %></li>
+      <% } %>
+      <% if (!user) { %>
       <li><a href="/login">Login</a></li>
       <li><a href="/signup">Sign up</a></li>
-      <li><a href="/logout">Logout</a></li>
+      <% } %>
     </ul>
   </nav>
 </div>
