@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes.js');
 const authRoutes = require('./routes/authRoutes.js');
+const {requireAuth} = require('./middleware/authMiddleware');
+const cookieParser = require('cookie-parser');
 
 // Create an express app
 const app = express();
@@ -18,6 +20,7 @@ app.set('view engine', 'ejs');
 // Middleware and static files
 app.use(express.json());
 app.use(express.static('public'));
+app.use(cookieParser());
 
 // Redirect
 app.get('/', (req, res) => {
@@ -25,7 +28,7 @@ app.get('/', (req, res) => {
 });
 
 // Blog routes
-app.use('/blogs', blogRoutes);
+app.use('/blogs', requireAuth, blogRoutes);
 
 // Auth routes
 app.use(authRoutes);
