@@ -2,18 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 @import '../partials/index.scss';
 
-:root {
-  --borderRadius: 20px;
-  --mainColor: #c0362c;
-  --navFontSize: 16px;
-  --glassBackground: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.6)
-  );
-  --boxShadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -21,7 +9,7 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background: var(--mainColor);
+  background: $mainColor;
 }
 
 ul {
@@ -39,9 +27,9 @@ a {
 }
 
 .bg-glass {
-  background: var(--glassBackground);
+  background: $glassBackground;
 }
 
 .radius {
-  border-radius: var(--borderRadius);
+  border-radius: $borderRadius;
 }

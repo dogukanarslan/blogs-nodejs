@@ -3,26 +3,24 @@
   position: relative;
   padding: 20px;
   text-align: center;
-}
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 10px 0;
+  }
 
-.details h1 {
-  font-size: 32px;
-  font-weight: 800;
-  margin: 10px 0;
-}
+  h4 {
+    font-weight: 800;
+    margin: 10px 0;
+  }
 
-.details h4 {
-  font-weight: 800;
-  margin: 10px 0;
-}
-
-.delete {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 8px;
-}
-
-.delete:hover {
-  cursor: pointer;
+  .delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
