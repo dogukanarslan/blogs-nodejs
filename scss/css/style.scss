@@ -1,11 +1,6 @@
+@import '../reset.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
-@import './reset.css';
-@import './newBlog.css';
-@import './nav.css';
-@import './blogs.css';
-@import './details.css';
-@import './404.css';
-@import './auth.css';
+@import '../partials/index.scss';
 
 :root {
   --borderRadius: 20px;
@@ -16,7 +11,7 @@
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0.6)
   );
-  --boxShadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  --boxShadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 * {
